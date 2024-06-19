@@ -1,0 +1,83 @@
+/* Reset and base styles  */
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Links */
+
+a, a:link, a:visited  {
+    text-decoration: none;
+}
+
+a:hover  {
+    text-decoration: none;
+}
+
+.flex-wrapper {
+    margin: 100px 100px;
+    max-width: 100%;
+}
+.calculator-content {
+}
+.calculator-content-title {
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+.calculator-content-body {
+    display: flex;
+}
+.calculator-content-body-left {
+}
+.calculator-content-body-left-inputs {
+}
+.input-wrapper {
+}
+.title {
+}
+.input {
+}
+.input-range {
+}
+.calculator-content-body-left-btns {
+}
+.bank {
+}
+.active {
+}
+.text {
+}
+.value {
+}
+.calculator-content-body-right {
+}
+.final-results-wrapper {
+    margin-left: 40px;
+
+}
+.final-result-item {
+    margin-left: 20px;
+    padding-bottom: 20px;
+
+}
+
+
+.alfa-style {
+    background-color: rgb(255, 0, 0);
+}
+.sberbank-style {
+    background-color: rgb(2, 235, 14);
+}
+.pochta-style {
+    background-color: rgb(70, 70, 250);
+}
+.tinkoff-style {
+    background-color: rgb(255, 230, 0);
+}
