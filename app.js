@@ -52,4 +52,12 @@ const banks = [
 ]
 
 let currentPrecent = banks[2].percent;
-console.log(currentPrecent);
+
+for(let bank of bankBtns) {
+    bank.addEventListener('click', () => {
+        for(let item of bankBtns) {
+            item.classList.remove('active');
+        }
+        bank.classList.add('active');
+    })
+}

@@ -28,7 +28,7 @@ a:hover  {
 .calculator-content {
 }
 .calculator-content-title {
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     margin-top: 30px;
 }
 .calculator-content-body {
@@ -39,8 +39,14 @@ a:hover  {
 .calculator-content-body-left-inputs {
 }
 .input-wrapper {
+    border: 1px solid rgb(172, 187, 190);
+    margin-bottom: 5px;
+    padding-left: 5px;
 }
 .title {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 600;
 }
 .input {
 }
@@ -48,16 +54,40 @@ a:hover  {
 }
 .calculator-content-body-left-btns {
 }
+
 .bank {
+    margin-right: 5px;
 }
 .active {
+    border: 1px solid rgb(78, 220, 255);
 }
 .text {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
 }
 .value {
 }
-.calculator-content-body-right {
+
+.text-value {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
 }
+
+.title-calculator {
+    margin-bottom: 30px;
+}
+
+.title-choice {
+    margin-bottom: 30px;
+}
+
+.calculator-content-body-right {
+
+}
+
+
 .final-results-wrapper {
     margin-left: 40px;
 
