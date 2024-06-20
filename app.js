@@ -35,19 +35,19 @@ assignValue();
 const banks = [
     {
         name: 'alfa',
-        percent: 8.7
+        precents: 8.7
     },
     {
         name: 'sberbank',
-        percent: 8.4
+        precents: 8.4
     },
     {
         name: 'pochta',
-        percent: 7.9
+        precents: 7.9
     },                  
     {
         name: 'tinkoff',
-        percent: 9.2
+        precents: 9.2
     }
 ]
 
@@ -66,5 +66,6 @@ for(let bank of bankBtns) {
 const takeActiveBank = currentActive => {
     const dataAttrValue = currentActive.dataset.name;
     const currentBank = banks.find( bank => bank.name === dataAttrValue);
-    console.log(currentBank);
+    currentPrecent = currentBank.precents;
+    console.log(currentPrecent);
 }
