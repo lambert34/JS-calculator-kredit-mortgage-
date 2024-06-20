@@ -67,5 +67,38 @@ const takeActiveBank = currentActive => {
     const dataAttrValue = currentActive.dataset.name;
     const currentBank = banks.find( bank => bank.name === dataAttrValue);
     currentPrecent = currentBank.precents;
-    console.log(currentPrecent);
+    calculation(totalCost.value, anInitialFee.value, creditTerm.value);
+};
+
+for(let input of inputsRange) {
+    input.addEventListener('input', () => {
+        assignValue();
+        calculation(totalCost.value, anInitialFee.value, creditTerm.value);
+    })
 }
+
+// формула с рассчетами и необходимыми параметрами для рассчетов
+
+const calculation = (totalCost = 0, anInitialFee = 100000, creditTerm = 1) => {
+
+    /*
+
+    ЕП - Ежемесячный платеж
+    РК - Размер кредита
+    ПР - Процентная ставка
+    КМ - Количество месяцев
+
+    ЕП = РК * (ПР/100) * (1 + ПР/100)^КМ / ((1 + ПР/100)^КМ - 1) - 1 формула от нейронки
+    ЕП = (РК + ((( РК / 100) * ПС) / 12 ) * КМ) / КМ; - формула из интернета
+
+    */
+
+    let monthlyPayment; // ежемесячный плятеж
+    let lounAmount = totalCost - anInitialFee; // размер кредита
+    let interestRate = currentPrecent; // процентная ставка
+    let numberOfYears = creditTerm; // количество лет 
+    let numberOfMounts = 12 * numberOfYears; // количество месяцев
+
+    monthlyPayment = (lounAmount + (((lounAmount / 100) * interestRate) / 12) * numberOfMounts) / numberOfMounts;
+}
+
