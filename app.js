@@ -100,5 +100,7 @@ const calculation = (totalCost = 0, anInitialFee = 100000, creditTerm = 1) => {
     let numberOfMounts = 12 * numberOfYears; // количество месяцев
 
     monthlyPayment = (lounAmount + (((lounAmount / 100) * interestRate) / 12) * numberOfMounts) / numberOfMounts;
+    const monthlyPaymentArounded = Math.round(monthlyPayment);
+    console.log(monthlyPaymentArounded);
 }
 
