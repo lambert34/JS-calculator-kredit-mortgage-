@@ -101,6 +101,12 @@ const calculation = (totalCost = 0, anInitialFee = 100000, creditTerm = 1) => {
 
     monthlyPayment = (lounAmount + (((lounAmount / 100) * interestRate) / 12) * numberOfMounts) / numberOfMounts;
     const monthlyPaymentArounded = Math.round(monthlyPayment);
-    console.log(monthlyPaymentArounded);
-}
 
+    if(monthlyPaymentArounded < 0) {
+        return false;
+    } else {
+        totalAmountOfCredit.innerHTML = `${lounAmount} Р`;
+        totalMonthlyPayment.innerHTML = `${monthlyPaymentArounded} Р`;
+        totalRecommendedIncome.innerHTML = `${monthlyPaymentArounded + ((monthlyPaymentArounded / 100) * 35)} Р`;
+    }
+}
