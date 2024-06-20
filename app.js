@@ -59,5 +59,11 @@ for(let bank of bankBtns) {
             item.classList.remove('active');
         }
         bank.classList.add('active');
+        takeActiveBank(bank);
     })
+}
+
+const takeActiveBank = currentActive => {
+    const dataAttrValue = currentActive.dataset.name;
+    console.log(dataAttrValue);
 }
