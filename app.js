@@ -65,5 +65,6 @@ for(let bank of bankBtns) {
 
 const takeActiveBank = currentActive => {
     const dataAttrValue = currentActive.dataset.name;
-    console.log(dataAttrValue);
+    const currentBank = banks.find( bank => bank.name === dataAttrValue);
+    console.log(currentBank);
 }
